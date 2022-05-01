@@ -1,0 +1,407 @@
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  background-color: #d2f0f3;
+}
+
+@media screen and (max-width: 767px) {
+  .app-container {
+    margin: 7%;
+
+    .header-container {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 35px;
+      color: #05425c;
+
+      .logo-header {
+        margin-top: 15px;
+
+        img {
+          height: 60px;
+          width: auto;
+          border: solid 6px #189ab4;
+          border-radius: 6px;
+        }
+      }
+    }
+
+    .body-container {
+      margin: 0 5%;
+
+      .options-container {
+        background-color: #d2f0f3;
+        display: flex;
+        color: #05425c;
+
+        .first-option,
+        .second-option {
+          width: 50%;
+          height: 34px;
+          padding: 10px;
+          text-align: center;
+          transition: 0.5s;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px 10px 0 0;
+          user-select: none;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+        }
+
+        .active-option {
+          background-color: #75e6da;
+          font-size: 15px;
+        }
+
+        .nonactive-option {
+          background-color: #ffffff;
+          font-size: 12px;
+        }
+      }
+
+      .option-select-input {
+        background-color: #75e6da;
+        padding: 15px;
+        border-radius: 0 0 10px 10px;
+
+        .first-input,
+        .second-input {
+
+          .text-area {
+            width: calc(100% - 10px);
+            resize: none;
+            background-color: white;
+            color: #05425c;
+            border-radius: 10px;
+            padding: 5px;
+            border: none;
+            margin-bottom: 10px;
+          }
+
+          textarea:focus-visible {
+            outline: none;
+          }
+
+          .buttons-container {
+            display: flex;
+            justify-content: space-between;
+
+            button,
+            input[type="button"] {
+              display: block;
+              margin-bottom: 10px;
+              font-size: 15px;
+              padding: 10px 0px;
+              text-align: center;
+              cursor: pointer;
+              background-color: #189ab4;
+              color: white;
+              border: none;
+              border-radius: 10px;
+            }
+          }
+        }
+
+        .first-input {
+          .buttons-container {
+
+            button,
+            input[type="button"] {
+              width: 48%;
+            }
+          }
+        }
+
+        .second-input {
+          .three-buttons {
+
+            button,
+            input[type="button"] {
+              width: 32%;
+            }
+
+            form {
+              width: 32%;
+
+              input[type="button"] {
+                width: 100%;
+                font-size: 15px;
+                white-space: normal;
+              }
+            }
+          }
+
+          .two-buttons {
+
+            button,
+            input[type="button"] {
+              width: 48%;
+            }
+          }
+        }
+      }
+    }
+
+    .output-container {
+      margin-top: 30px;
+      background-color: #75e6da;
+      padding: 15px;
+      border-radius: 10px;
+
+      textarea {
+        width: calc(100% - 10px);
+        resize: none;
+        background-color: white;
+        color: #05425c;
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        margin-bottom: 10px;
+      }
+
+      .buttons-container {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          display: block;
+          margin-bottom: 10px;
+          font-size: 15px;
+          padding: 10px 0px;
+          width: 48%;
+          text-align: center;
+          cursor: pointer;
+          background-color: #189ab4;
+          color: white;
+          border: none;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .app-container {
+    margin: 7%;
+
+    .header-container {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #05425c;
+
+      .logo-header {
+        margin-top: 15px;
+
+        img {
+          height: 80px;
+          width: auto;
+          border: solid 8px #189ab4;
+          border-radius: 8px;
+        }
+      }
+    }
+
+    .body-container {
+      margin: 0 5%;
+
+      .options-container {
+        background-color: #d2f0f3;
+        display: flex;
+        color: #05425c;
+
+        .first-option,
+        .second-option {
+          width: 50%;
+          height: 34px;
+          padding: 10px 0px;
+          text-align: center;
+          transition: 0.5s;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px 10px 0 0;
+          user-select: none;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+        }
+
+        .active-option {
+          background-color: #75e6da;
+          font-size: 21px;
+        }
+
+        .nonactive-option {
+          background-color: #ffffff;
+          font-size: 16px;
+        }
+
+        .nonactive-option:hover {
+          background-color: #189ab4 !important;
+          color: white;
+        }
+      }
+
+      .option-select-input {
+        background-color: #75e6da;
+        padding: 30px;
+        border-radius: 0 0 10px 10px;
+
+        .first-input,
+        .second-input {
+          display: flex;
+          justify-content: space-between;
+
+          .text-area {
+            width: calc(95% - 150px);
+            resize: none;
+            background-color: white;
+            color: #05425c;
+            border-radius: 10px;
+            padding: 5px;
+            border: none;
+          }
+
+          textarea:focus-visible {
+            outline: none;
+          }
+
+          .buttons-container {
+
+            button,
+            input[type="button"] {
+              display: block;
+              margin-bottom: 10px;
+              font-size: 16px;
+              padding: 10px 0px;
+              width: 150px;
+              text-align: center;
+              cursor: pointer;
+              background-color: #189ab4;
+              color: white;
+              border: none;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+
+      .output-container {
+        margin-top: 30px;
+        background-color: #75e6da;
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+
+        textarea {
+          width: calc(95% - 150px);
+          resize: none;
+          background-color: white;
+          color: #05425c;
+          border-radius: 10px;
+          padding: 5px;
+          border: none;
+        }
+
+        .buttons-container {
+          button {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            padding: 10px 0px;
+            width: 150px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #189ab4;
+            color: white;
+            border: none;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .app-container {
+    margin: 30px 5%;
+
+    .header-container {
+      font-size: 60px;
+      margin-bottom: 70px;
+
+      .logo-header {
+
+        img {
+          height: 100px;
+          border: solid 10px #189ab4;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .body-container {
+      margin: 0 15%;
+
+      .options-container {
+
+        .active-option {
+          font-size: 24px;
+        }
+
+        .nonactive-option {
+          font-size: 18px;
+        }
+
+      }
+
+      .option-select-input {
+        padding: 40px;
+
+        .first-input,
+        .second-input {
+
+          .text-area {
+            width: calc(95% - 200px);
+          }
+
+          .buttons-container {
+
+            button,
+            input[type="button"] {
+              font-size: 18px;
+              width: 200px;
+            }
+          }
+        }
+      }
+
+      .output-container {
+        padding: 40px;
+
+        textarea {
+          width: calc(95% - 200px);
+        }
+
+        .buttons-container {
+          button {
+            font-size: 18px;
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
