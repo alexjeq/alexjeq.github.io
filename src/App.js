@@ -11,6 +11,11 @@ function App() {
   const [firstTextarea, setFirstTextArea] = useState("");
   const [secondTextarea, setSecondTextArea] = useState("");
   const [output, setOutput] = useState("");
+  const [orderingType, setOrderingType] = useState("asc");
+
+  const handleRadioButton = (type) => {
+    setOrderingType(type === "asc" ? "asc" : "desc");
+  }
 
   const handleOption = (type) => {
     if (type === "1") {
@@ -55,9 +60,9 @@ function App() {
       return !["", "\n", "\r"].includes(value)
     }).sort((a, b) => {
       if (a.toLowerCase() < b.toLowerCase()) {
-        return -1;
+        return orderingType === "asc" ? -1 : 1;
       } else if (a.toLowerCase() > b.toLowerCase()) {
-        return 1;
+        return orderingType === "asc" ? 1 : -1;
       } else {
         return 0;
       }
@@ -85,7 +90,7 @@ function App() {
         <div className='logo-header'>
           <img src={logo} alt="logo" />
         </div>
-        Welcome to sort names algorithm!
+        Welcome to order names algorithm!
       </div>
       <div className='body-container'>
         <div className='options-container'>
@@ -101,6 +106,30 @@ function App() {
           </div>
         </div>
         <div className='option-select-input'>
+          <form className='ordering-container'>
+            <div className="choose-order-type">
+              Choose ordering type:
+            </div>
+            <div className='ordering-type' onClick={() => handleRadioButton("asc")}>
+              <input
+                type="radio"
+                name="fav_language"
+                value="asc"
+                required="required"
+                checked={orderingType === "asc"}
+              />
+              <label style={{ fontWeight: orderingType === "asc" ? "bold" : "normal" }} for="html">Ascending</label><br />
+            </div>
+            <div className='ordering-type' onClick={() => handleRadioButton("desc")}>
+              <input
+                type="radio"
+                name="fav_language"
+                value="desc"
+                checked={orderingType === "desc"}
+              />
+              <label style={{ fontWeight: orderingType === "desc" ? "bold" : "normal" }} for="css">Descending</label><br />
+            </div>
+          </form>
           {firstOption && (
             <div className='first-input'>
               <TextArea
@@ -117,7 +146,7 @@ function App() {
                 <Button
                   onClick={() => sortNames("1")}
                 >
-                  Sort names
+                  Order names
                 </Button>
                 <Button
                   id="reset-first" onClick={() => resetTextarea()}
@@ -158,7 +187,7 @@ function App() {
                 <Button
                   onClick={() => sortNames("2")}
                 >
-                  Sort names
+                  Order names
                 </Button>
                 <Button
                   id="reset-second"

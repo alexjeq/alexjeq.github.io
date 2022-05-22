@@ -1,10 +1,17 @@
+$blue1: #05425c;
+$blue2: #189ab4;
+$blue3: #d2f0f3;
+$green: #75e6da;
+$white: #ffffff;
+$black: #000000;
+
 * {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: $black;
+  -moz-tap-highlight-color: $black;
 }
 
 body {
-  background-color: #d2f0f3;
+  background-color: $blue3;
 }
 
 @media screen and (max-width: 767px) {
@@ -15,7 +22,7 @@ body {
       font-size: 30px;
       text-align: center;
       margin-bottom: 35px;
-      color: #05425c;
+      color: $blue1;
 
       .logo-header {
         margin-top: 15px;
@@ -23,7 +30,7 @@ body {
         img {
           height: 60px;
           width: auto;
-          border: solid 6px #189ab4;
+          border: solid 6px $blue2;
           border-radius: 6px;
         }
       }
@@ -33,9 +40,9 @@ body {
       margin: 0 5%;
 
       .options-container {
-        background-color: #d2f0f3;
+        background-color: $blue3;
         display: flex;
-        color: #05425c;
+        color: $blue1;
 
         .first-option,
         .second-option {
@@ -56,20 +63,42 @@ body {
         }
 
         .active-option {
-          background-color: #75e6da;
+          background-color: $green;
           font-size: 15px;
         }
 
         .nonactive-option {
-          background-color: #ffffff;
+          background-color: $white;
           font-size: 12px;
         }
       }
 
       .option-select-input {
-        background-color: #75e6da;
+        background-color: $green;
         padding: 15px;
         border-radius: 0 0 10px 10px;
+
+        .ordering-container {
+          padding: 10px;
+          background-color: $white;
+          color: $blue1;
+          // display: flex;
+          gap: 20px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          font-size: 15px;
+
+          .ordering-type {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            input,
+            label {
+              cursor: pointer;
+            }
+          }
+        }
 
         .first-input,
         .second-input {
@@ -77,8 +106,8 @@ body {
           .text-area {
             width: calc(100% - 10px);
             resize: none;
-            background-color: white;
-            color: #05425c;
+            background-color: $white;
+            color: $blue1;
             border-radius: 10px;
             padding: 5px;
             border: none;
@@ -101,8 +130,8 @@ body {
               padding: 10px 0px;
               text-align: center;
               cursor: pointer;
-              background-color: #189ab4;
-              color: white;
+              background-color: $blue2;
+              color: $white;
               border: none;
               border-radius: 10px;
             }
@@ -151,15 +180,15 @@ body {
 
     .output-container {
       margin-top: 30px;
-      background-color: #75e6da;
+      background-color: $green;
       padding: 15px;
       border-radius: 10px;
 
       textarea {
         width: calc(100% - 10px);
         resize: none;
-        background-color: white;
-        color: #05425c;
+        background-color: $white;
+        color: $blue1;
         border-radius: 10px;
         padding: 5px;
         border: none;
@@ -178,8 +207,8 @@ body {
           width: 48%;
           text-align: center;
           cursor: pointer;
-          background-color: #189ab4;
-          color: white;
+          background-color: $blue2;
+          color: $white;
           border: none;
           border-radius: 10px;
         }
@@ -196,7 +225,7 @@ body {
       font-size: 40px;
       text-align: center;
       margin-bottom: 50px;
-      color: #05425c;
+      color: $blue1;
 
       .logo-header {
         margin-top: 15px;
@@ -204,7 +233,7 @@ body {
         img {
           height: 80px;
           width: auto;
-          border: solid 8px #189ab4;
+          border: solid 8px $blue2;
           border-radius: 8px;
         }
       }
@@ -214,9 +243,9 @@ body {
       margin: 0 5%;
 
       .options-container {
-        background-color: #d2f0f3;
+        background-color: $blue3;
         display: flex;
-        color: #05425c;
+        color: $blue1;
 
         .first-option,
         .second-option {
@@ -237,25 +266,47 @@ body {
         }
 
         .active-option {
-          background-color: #75e6da;
+          background-color: $green;
           font-size: 21px;
         }
 
         .nonactive-option {
-          background-color: #ffffff;
+          background-color: $white;
           font-size: 16px;
         }
 
         .nonactive-option:hover {
-          background-color: #189ab4 !important;
-          color: white;
+          background-color: $blue2  !important;
+          color: $white;
         }
       }
 
       .option-select-input {
-        background-color: #75e6da;
+        background-color: $green;
         padding: 30px;
         border-radius: 0 0 10px 10px;
+
+        .ordering-container {
+          padding: 10px;
+          background-color: $white;
+          color: $blue1;
+          display: flex;
+          gap: 20px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          font-size: 18px;
+
+          .ordering-type {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            input,
+            label {
+              cursor: pointer;
+            }
+          }
+        }
 
         .first-input,
         .second-input {
@@ -265,8 +316,8 @@ body {
           .text-area {
             width: calc(95% - 150px);
             resize: none;
-            background-color: white;
-            color: #05425c;
+            background-color: $white;
+            color: $blue1;
             border-radius: 10px;
             padding: 5px;
             border: none;
@@ -287,8 +338,8 @@ body {
               width: 150px;
               text-align: center;
               cursor: pointer;
-              background-color: #189ab4;
-              color: white;
+              background-color: $blue2;
+              color: $white;
               border: none;
               border-radius: 10px;
             }
@@ -298,7 +349,7 @@ body {
 
       .output-container {
         margin-top: 30px;
-        background-color: #75e6da;
+        background-color: $green;
         padding: 30px;
         display: flex;
         justify-content: space-between;
@@ -307,8 +358,8 @@ body {
         textarea {
           width: calc(95% - 150px);
           resize: none;
-          background-color: white;
-          color: #05425c;
+          background-color: $white;
+          color: $blue1;
           border-radius: 10px;
           padding: 5px;
           border: none;
@@ -323,8 +374,8 @@ body {
             width: 150px;
             text-align: center;
             cursor: pointer;
-            background-color: #189ab4;
-            color: white;
+            background-color: $blue2;
+            color: $white;
             border: none;
             border-radius: 10px;
           }
@@ -346,7 +397,7 @@ body {
 
         img {
           height: 100px;
-          border: solid 10px #189ab4;
+          border: solid 10px $blue2;
           border-radius: 10px;
         }
       }
